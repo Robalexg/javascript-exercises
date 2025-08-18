@@ -1,4 +1,24 @@
-const fibonacci = function() {
+const fibonacci = function(n) {
+    let fib = [0,1]
+
+    if(n < 0){
+        return 'OOPS'
+    }
+
+    if(n == 0){
+        return 0
+    }
+
+    if(n === 2){
+        return 0
+    }
+
+    for(let i = 2; i <= n; i++){
+        fib.push(fib[i-1] + fib[i-2])
+    }
+
+    return fib[n]
+
 
 };
 

@@ -1,25 +1,40 @@
-const add = function() {
+const add = function(a,b) {
+  return a + b
+};
+
+const subtract = function(a,b) {
+  return a - b
 	
 };
 
-const subtract = function() {
-	
-};
-
-const sum = function() {
-	
-};
-
-const multiply = function() {
+const sum = function(arr) {
+  return arr
+  .reduce((acc,cur) => acc+=cur,0)
 
 };
 
-const power = function() {
-	
+const multiply = function(arr) {
+  return arr
+  .reduce((acc,cur) => acc *= cur,1)
+
 };
 
-const factorial = function() {
-	
+const power = function(a,b) {
+  return Math.pow(a,b)
+};
+
+const factorial = function(n) {
+	if (n < 0) {
+    return "Factorial is not defined for negative numbers.";
+  } else if (n === 0) {
+    return 1;
+  } else {
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+      result *= i;
+    }
+    return result;
+  }
 };
 
 // Do not edit below this line
